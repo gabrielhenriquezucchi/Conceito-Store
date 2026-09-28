@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo: #fdf5f3;
+    --cor-texto: #4a3a3a;
+    --cor-primaria: #4a3a3a;
+    --cor-acento: #c17b84;
+    --cor-clara: #ffffff;
+    --fonte-titulo: 'Playfair Display', serif;
+    --fonte-logo: 'Dancing Script', cursive;
+    --fonte-texto: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 16px;
+    background-color: var(--cor-clara);
+    border-bottom: 1px solid #f0dede;
+}
+
+header h1 {
+    font-family: var(--fonte-logo);
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--cor-acento);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+nav a:hover {
+    border-color: var(--cor-acento);
+}
+
+section {
+    padding: 48px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section p:first-child {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    color: var(--cor-acento);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+section h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+section > p {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 24px auto;
+    color: #6b5c5c;
+}
+
+#inicio {
+    text-align: center;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.botoes a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: center;
+    transition: opacity 0.2s ease;
+}
+
+.botoes a:first-child {
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+}
+
+.botoes a:last-child {
+    background-color: var(--cor-acento);
+    color: var(--cor-clara);
+}
+
+.botoes a:hover {
+    opacity: 0.85;
+}
+
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 24px 48px;
+    }
+
+    section h2 {
+        font-size: 2.5rem;
+    }
+
+    .botoes {
+        flex-direction: row;
+    }
+}
